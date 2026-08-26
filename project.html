@@ -269,6 +269,27 @@
     color: var(--ink);
   }
   .gtm-text { color: var(--ink-soft); font-size: 13.5px; }
+  .card-links {
+    display: flex;
+    gap: 14px;
+    margin-top: 4px;
+    padding-top: 12px;
+    border-top: 1px solid var(--line);
+  }
+  .card-links a {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+  }
+  .card-spec-link { color: var(--ink-soft); }
+  .card-spec-link:hover { color: var(--blueprint); }
+  .card-live-link {
+    color: var(--accent);
+    font-weight: 600;
+    margin-left: auto;
+  }
+  .card-live-link:hover { text-decoration: underline; }
 
   footer {
     margin-top: 60px;
@@ -323,85 +344,85 @@
   </div>
   <div class="grid">
 
-    <a class="card" href="/crm/matter-crm.html">
+    <div class="card">
       <div class="card-top"><span class="card-num">01</span><h3 class="card-title">Matter CRM</h3></div>
       <p class="card-vertical">Law firms</p>
       <p class="card-pitch">Client intake &rarr; matter tracking &rarr; retainer billing, with none of the case-management bloat a real legal-tech tool carries.</p>
       <div class="card-row"><span class="label">Reuses</span><div class="chips"><span>Lead</span><span>Proposal</span><span>TaskGroup</span><span>Contract</span><span>Invoice</span></div></div>
       <div class="card-row"><span class="label">GTM</span><span class="gtm-text">Scrape law firms &rarr; Lighthouse-audit their site &rarr; warmup email pitching a zero-setup intake CRM their receptionist can run.</span></div>
-    </a>
+    <div class="card-links"><a class="card-spec-link" href="/crm/matter-crm.html">Spec &rarr;</a><a class="card-live-link" href="https://matter-crm-ui.onrender.com" target="_blank" rel="noopener">Live app &#8599;</a></div></div>
 
-    <a class="card" href="/crm/table-crm.html">
+    <div class="card">
       <div class="card-top"><span class="card-num">02</span><h3 class="card-title">Table CRM</h3></div>
       <p class="card-vertical">Restaurants</p>
       <p class="card-pitch">Reservation pipeline plus a post-visit loyalty and review-request drip that runs itself.</p>
       <div class="card-row"><span class="label">Reuses</span><div class="chips"><span>Client</span><span>LoyaltyTransaction</span><span>WarmupPlan</span><span>EmailTemplate</span></div></div>
       <div class="card-row"><span class="label">GTM</span><span class="gtm-text">Restaurant scrape list + Instagram outreach &mdash; leadMarketing already scans Instagram, and this niche lives there.</span></div>
-    </a>
+    <div class="card-links"><a class="card-spec-link" href="/crm/table-crm.html">Spec &rarr;</a><a class="card-live-link" href="https://tablecrm-ui.vercel.app" target="_blank" rel="noopener">Live app &#8599;</a></div></div>
 
-    <a class="card" href="/crm/listing-crm.html">
+    <div class="card">
       <div class="card-top"><span class="card-num">03</span><h3 class="card-title">Listing CRM</h3></div>
       <p class="card-vertical">Real estate agents</p>
       <p class="card-pitch">The smallest lift on this whole list &mdash; ProposalSpace / ProposalRent / ProposalCompetitor already model a listing pipeline almost verbatim.</p>
       <div class="card-row"><span class="label">Reuses</span><div class="chips"><span>Client</span><span>Proposal</span><span>ProposalSpace</span><span>ProposalRent</span><span>Contract</span></div></div>
       <div class="card-row"><span class="label">GTM</span><span class="gtm-text">Agent sites score badly on Lighthouse almost universally &mdash; the audit is a near-guaranteed icebreaker here.</span></div>
-    </a>
+    <div class="card-links"><a class="card-spec-link" href="/crm/listing-crm.html">Spec &rarr;</a><a class="card-live-link" href="https://listingcrm-ui.vercel.app" target="_blank" rel="noopener">Live app &#8599;</a></div></div>
 
-    <a class="card" href="/crm/membership-crm.html">
+    <div class="card">
       <div class="card-top"><span class="card-num">04</span><h3 class="card-title">Membership CRM</h3></div>
       <p class="card-vertical">Fitness studios</p>
       <p class="card-pitch">Trial-to-member pipeline, class scheduling, and an attendance-streak loyalty mechanic.</p>
       <div class="card-row"><span class="label">Reuses</span><div class="chips"><span>Lead</span><span>AgencyTask</span><span>LoyaltyTransaction</span><span>WhatsAppPlan</span></div></div>
       <div class="card-row"><span class="label">GTM</span><span class="gtm-text">WhatsApp warmup for trial conversion &mdash; the channel gyms already run on.</span></div>
-    </a>
+    <div class="card-links"><a class="card-spec-link" href="/crm/membership-crm.html">Spec &rarr;</a><a class="card-live-link" href="https://membershipcrm-ui.vercel.app" target="_blank" rel="noopener">Live app &#8599;</a></div></div>
 
-    <a class="card" href="/crm/booking-crm.html">
+    <div class="card">
       <div class="card-top"><span class="card-num">05</span><h3 class="card-title">Booking CRM</h3></div>
       <p class="card-vertical">Beauty &amp; spas</p>
       <p class="card-pitch">Appointment-as-task, punch-card loyalty, and Instagram DMs landing straight in the pipeline.</p>
       <div class="card-row"><span class="label">Reuses</span><div class="chips"><span>Client</span><span>Task</span><span>LoyaltyTransaction</span><span>ChangeLog</span></div></div>
       <div class="card-row"><span class="label">GTM</span><span class="gtm-text">leadMarketing's Instagram-lead hook feeds this niche directly &mdash; same channel, same data shape.</span></div>
-    </a>
+    <div class="card-links"><a class="card-spec-link" href="/crm/booking-crm.html">Spec &rarr;</a><a class="card-live-link" href="https://bookingcrm-ui.vercel.app" target="_blank" rel="noopener">Live app &#8599;</a></div></div>
 
-    <a class="card" href="/crm/garage-crm.html">
+    <div class="card">
       <div class="card-top"><span class="card-num">06</span><h3 class="card-title">Garage CRM</h3></div>
       <p class="card-vertical">Auto workshops</p>
       <p class="card-pitch">Per-vehicle repair-job tracking, parts-supplier partner records, WhatsApp status updates to the customer.</p>
       <div class="card-row"><span class="label">Reuses</span><div class="chips"><span>Client</span><span>TaskGroup</span><span>Invoice</span><span>Partner</span></div></div>
       <div class="card-row"><span class="label">GTM</span><span class="gtm-text">Workshop scrape + WhatsApp warmup &mdash; repair-status texting is already the norm in this vertical.</span></div>
-    </a>
+    <div class="card-links"><a class="card-spec-link" href="/crm/garage-crm.html">Spec &rarr;</a><a class="card-live-link" href="https://garagecrm-ui.vercel.app" target="_blank" rel="noopener">Live app &#8599;</a></div></div>
 
-    <a class="card" href="/crm/patient-crm.html">
+    <div class="card">
       <div class="card-top"><span class="card-num">07</span><h3 class="card-title">Patient CRM</h3></div>
       <p class="card-vertical">Veterinary clinics</p>
       <p class="card-pitch">Pet-owner profiles with recurring vaccination and checkup reminders baked in from day one.</p>
       <div class="card-row"><span class="label">Reuses</span><div class="chips"><span>Client</span><span>AgencyTask</span><span>Invoice</span><span>EmailTemplate</span></div></div>
       <div class="card-row"><span class="label">GTM</span><span class="gtm-text">Vet scrape list, pitched on one line: your no-show rate drops when reminders are automatic.</span></div>
-    </a>
+    <div class="card-links"><a class="card-spec-link" href="/crm/patient-crm.html">Spec &rarr;</a><a class="card-live-link" href="https://patientcrm-ui.vercel.app" target="_blank" rel="noopener">Live app &#8599;</a></div></div>
 
-    <a class="card" href="/crm/project-crm.html">
+    <div class="card">
       <div class="card-top"><span class="card-num">08</span><h3 class="card-title">Project CRM</h3></div>
       <p class="card-vertical">Architects</p>
       <p class="card-pitch">Bid pipeline, phased project milestones, staged billing, and change-request tracking.</p>
       <div class="card-row"><span class="label">Reuses</span><div class="chips"><span>Proposal</span><span>TaskGroup</span><span>Contract</span><span>HelpdeskTicket</span></div></div>
       <div class="card-row"><span class="label">GTM</span><span class="gtm-text">Architect scrape + Lighthouse audit &mdash; portfolio sites run heavy, an easy technical hook.</span></div>
-    </a>
+    <div class="card-links"><a class="card-spec-link" href="/crm/project-crm.html">Spec &rarr;</a><a class="card-live-link" href="https://projectcrm-ui.vercel.app" target="_blank" rel="noopener">Live app &#8599;</a></div></div>
 
-    <a class="card" href="/crm/engagement-crm.html">
+    <div class="card">
       <div class="card-top"><span class="card-num">09</span><h3 class="card-title">Engagement CRM</h3></div>
       <p class="card-vertical">Consultants &amp; accountants</p>
       <p class="card-pitch">Retainer clients, recurring invoicing, deliverable tracking, a client-support inbox.</p>
       <div class="card-row"><span class="label">Reuses</span><div class="chips"><span>Client</span><span>Contract</span><span>Invoice</span><span>Conversation</span></div></div>
       <div class="card-row"><span class="label">GTM</span><span class="gtm-text">Professional-services scrape list, plain email warmup &mdash; this audience actually reads email.</span></div>
-    </a>
+    <div class="card-links"><a class="card-spec-link" href="/crm/engagement-crm.html">Spec &rarr;</a><a class="card-live-link" href="https://engagementcrm-ui.vercel.app" target="_blank" rel="noopener">Live app &#8599;</a></div></div>
 
-    <a class="card" href="/crm/intake-crm.html">
+    <div class="card">
       <div class="card-top"><span class="card-num">10</span><h3 class="card-title">Intake CRM</h3></div>
       <p class="card-vertical">Health clinics</p>
       <p class="card-pitch">Same shape as Patient CRM with a human patient in place of a pet.</p>
       <div class="card-row"><span class="label">Reuses</span><div class="chips"><span>Client</span><span>Task</span><span>HelpdeskTicket</span><span>WhatsAppPlan</span></div></div>
       <div class="card-row"><span class="label">GTM</span><span class="gtm-text">Health-vertical scrape + WhatsApp reminders aimed at private-pay no-shows.</span></div>
-    </a>
+    <div class="card-links"><a class="card-spec-link" href="/crm/intake-crm.html">Spec &rarr;</a><a class="card-live-link" href="https://intakecrm-ui.vercel.app" target="_blank" rel="noopener">Live app &#8599;</a></div></div>
 
   </div>
 </section>
@@ -414,61 +435,61 @@
   </div>
   <div class="grid">
 
-    <a class="card" href="/crm/audit-magnet.html">
+    <div class="card">
       <div class="card-top"><span class="card-num">11</span><h3 class="card-title">Audit-as-a-Magnet</h3></div>
       <p class="card-vertical">White-label tool</p>
       <p class="card-pitch">Point it at any list, get branded PDF site audits on autopilot &mdash; a standalone tool other agencies resell.</p>
       <div class="card-row"><span class="label">Reuses</span><div class="chips"><span>LighthouseScan</span><span>AuditRequest</span><span>LeadReport</span></div></div>
       <div class="card-row"><span class="label">GTM</span><span class="gtm-text">Sell it to the freelance web devs who'd otherwise be your competitors on the vertical products above.</span></div>
-    </a>
+    <div class="card-links"><a class="card-spec-link" href="/crm/audit-magnet.html">Spec &rarr;</a><a class="card-live-link" href="https://audit-magnet-crm-ui.onrender.com" target="_blank" rel="noopener">Live app &#8599;</a></div></div>
 
-    <a class="card" href="/crm/worth-contacting-crm.html">
+    <div class="card">
       <div class="card-top"><span class="card-num">12</span><h3 class="card-title">Worth-Contacting CRM</h3></div>
       <p class="card-vertical">Prospecting tool</p>
       <p class="card-pitch"><code>filter_leads.py</code>'s scoring &mdash; no site +10, low rating with a site +5, reviews with no site +5 &mdash; as a live-ranked view, not a one-off CSV.</p>
       <div class="card-row"><span class="label">Reuses</span><div class="chips"><span>scraper scoring</span><span>Lead.status</span></div></div>
       <div class="card-row"><span class="label">GTM</span><span class="gtm-text">Sold to local agencies and freelancers as their own always-fresh prospecting pipeline.</span></div>
-    </a>
+    <div class="card-links"><a class="card-spec-link" href="/crm/worth-contacting-crm.html">Spec &rarr;</a><a class="card-live-link" href="https://worth-contacting-crm-ui.onrender.com" target="_blank" rel="noopener">Live app &#8599;</a></div></div>
 
-    <a class="card" href="/crm/whatsapp-only-crm.html">
+    <div class="card">
       <div class="card-top"><span class="card-num">13</span><h3 class="card-title">WhatsApp-Only CRM</h3></div>
       <p class="card-vertical">Channel-first tool</p>
       <p class="card-pitch">No email UI at all &mdash; every Lead and Client thread is a WhatsApp conversation, full stop.</p>
       <div class="card-row"><span class="label">Reuses</span><div class="chips"><span>WhatsAppPlan</span><span>WhatsAppBatch</span><span>WhatsAppBatchLead</span></div></div>
       <div class="card-row"><span class="label">GTM</span><span class="gtm-text">Sells itself to workshops, salons, restaurants &mdash; the businesses that never check email.</span></div>
-    </a>
+    <div class="card-links"><a class="card-spec-link" href="/crm/whatsapp-only-crm.html">Spec &rarr;</a><a class="card-live-link" href="https://whatsapp-only-crm-ui.onrender.com" target="_blank" rel="noopener">Live app &#8599;</a></div></div>
 
-    <a class="card" href="/crm/warmup-service.html">
+    <div class="card">
       <div class="card-top"><span class="card-num">14</span><h3 class="card-title">Warmup-as-a-Service</h3></div>
       <p class="card-vertical">Outbound tool</p>
       <p class="card-pitch">White-label the drip engine and country/phase dashboard, decoupled from scraping &mdash; bring your own list.</p>
       <div class="card-row"><span class="label">Reuses</span><div class="chips"><span>WarmupPlan</span><span>WarmupBatch</span><span>EmailLog</span></div></div>
       <div class="card-row"><span class="label">GTM</span><span class="gtm-text">Monthly fee to small agencies who don't want to build outbound tooling themselves.</span></div>
-    </a>
+    <div class="card-links"><a class="card-spec-link" href="/crm/warmup-service.html">Spec &rarr;</a><a class="card-live-link" href="https://warmup-as-a-service-ui.onrender.com" target="_blank" rel="noopener">Live app &#8599;</a></div></div>
 
-    <a class="card" href="/crm/reviews-crm.html">
+    <div class="card">
       <div class="card-top"><span class="card-num">15</span><h3 class="card-title">Reviews CRM</h3></div>
       <p class="card-vertical">Add-on tool</p>
       <p class="card-pitch">One job only: a post-visit review-request drip, sold purely on "get more Google reviews."</p>
       <div class="card-row"><span class="label">Reuses</span><div class="chips"><span>rating / reviewCount</span><span>ClientEvent</span><span>WarmupPlan</span></div></div>
       <div class="card-row"><span class="label">GTM</span><span class="gtm-text">Works across every vertical above as a small add-on, not a separate sales motion.</span></div>
-    </a>
+    <div class="card-links"><a class="card-spec-link" href="/crm/reviews-crm.html">Spec &rarr;</a><a class="card-live-link" href="https://reviews-crm-ui.onrender.com" target="_blank" rel="noopener">Live app &#8599;</a></div></div>
 
-    <a class="card" href="/crm/dm-first-crm.html">
+    <div class="card">
       <div class="card-top"><span class="card-num">16</span><h3 class="card-title">DM-First CRM</h3></div>
       <p class="card-vertical">Channel-first tool</p>
       <p class="card-pitch">An Instagram-native pipeline for businesses whose inbound is DMs, not forms.</p>
       <div class="card-row"><span class="label">Reuses</span><div class="chips"><span>Lead.instagramUrl</span><span>instagramStatus</span></div></div>
       <div class="card-row"><span class="label">GTM</span><span class="gtm-text">Same list as Table CRM and Booking CRM &mdash; beauty, fitness, restaurants.</span></div>
-    </a>
+    <div class="card-links"><a class="card-spec-link" href="/crm/dm-first-crm.html">Spec &rarr;</a><a class="card-live-link" href="https://dm-first-crm-ui.onrender.com" target="_blank" rel="noopener">Live app &#8599;</a></div></div>
 
-    <a class="card" href="/crm/site-health-crm.html">
+    <div class="card">
       <div class="card-top"><span class="card-num">17</span><h3 class="card-title">Site-Health CRM</h3></div>
       <p class="card-vertical">Recurring monitor</p>
       <p class="card-pitch">The Lighthouse score becomes a tracked metric re-scanned monthly, with a built-in upsell path to a redesign.</p>
       <div class="card-row"><span class="label">Reuses</span><div class="chips"><span>LighthouseScan (recurring)</span><span>Client</span></div></div>
       <div class="card-row"><span class="label">GTM</span><span class="gtm-text">Every audit sent in the vertical GTMs above converts into a recurring subscription, not a one-time pitch.</span></div>
-    </a>
+    <div class="card-links"><a class="card-spec-link" href="/crm/site-health-crm.html">Spec &rarr;</a><a class="card-live-link" href="https://site-health-crm-ui.onrender.com" target="_blank" rel="noopener">Live app &#8599;</a></div></div>
 
   </div>
 </section>
@@ -481,69 +502,69 @@
   </div>
   <div class="grid">
 
-    <a class="card" href="/crm/franchise-ops-crm.html">
+    <div class="card">
       <div class="card-top"><span class="card-num">18</span><h3 class="card-title">Franchise Ops CRM</h3></div>
       <p class="card-vertical">Multi-location</p>
       <p class="card-pitch">Shop / Inspection / Closing / Opening / FranchiseTicket, pulled out of the full platform for chains too small (2&ndash;10 locations) to need it.</p>
       <div class="card-row"><span class="label">Reuses</span><div class="chips"><span>Shop</span><span>Inspection</span><span>Closing/Opening</span><span>FranchiseTicket</span></div></div>
       <div class="card-row"><span class="label">GTM</span><span class="gtm-text">Sell to any vertical above the moment one customer opens a second location.</span></div>
-    </a>
+    <div class="card-links"><a class="card-spec-link" href="/crm/franchise-ops-crm.html">Spec &rarr;</a><a class="card-live-link" href="https://franchise-ops-crm-ui.onrender.com" target="_blank" rel="noopener">Live app &#8599;</a></div></div>
 
-    <a class="card" href="/crm/solo-crm.html">
+    <div class="card">
       <div class="card-top"><span class="card-num">19</span><h3 class="card-title">Solo CRM</h3></div>
       <p class="card-vertical">Base product</p>
       <p class="card-pitch">The floor: Client, Proposal, Contract, Invoice, Task &mdash; nothing else. No multi-tenant, no HR.</p>
       <div class="card-row"><span class="label">Reuses</span><div class="chips"><span>Client</span><span>Proposal</span><span>Contract</span><span>Invoice</span><span>Task</span></div></div>
       <div class="card-row"><span class="label">GTM</span><span class="gtm-text">The generic base every vertical product above is a reskin of &mdash; sell it horizontally before verticalizing.</span></div>
-    </a>
+    <div class="card-links"><a class="card-spec-link" href="/crm/solo-crm.html">Spec &rarr;</a><a class="card-live-link" href="https://solocrm-ui.vercel.app" target="_blank" rel="noopener">Live app &#8599;</a></div></div>
 
-    <a class="card" href="/crm/helpdesk-lite.html">
+    <div class="card">
       <div class="card-top"><span class="card-num">20</span><h3 class="card-title">Helpdesk-Lite</h3></div>
       <p class="card-vertical">Support layer</p>
       <p class="card-pitch">HelpdeskTicket repurposed as a plain "did my thing get done" inbox, WhatsApp-linked.</p>
       <div class="card-row"><span class="label">Reuses</span><div class="chips"><span>HelpdeskTicket</span><span>WhatsAppBatch</span></div></div>
       <div class="card-row"><span class="label">GTM</span><span class="gtm-text">Bundled into Garage CRM and Patient CRM as the support layer, not sold on its own.</span></div>
-    </a>
+    <div class="card-links"><a class="card-spec-link" href="/crm/helpdesk-lite.html">Spec &rarr;</a><a class="card-live-link" href="https://helpdesk-lite-ui.onrender.com" target="_blank" rel="noopener">Live app &#8599;</a></div></div>
 
-    <a class="card" href="/crm/rollout-planner-crm.html">
+    <div class="card">
       <div class="card-top"><span class="card-num">21</span><h3 class="card-title">Rollout Planner CRM</h3></div>
       <p class="card-vertical">Expansion tool</p>
       <p class="card-pitch">leadMarketing's phase/country fields turned into a city-by-city expansion planner next to the live pipeline.</p>
       <div class="card-row"><span class="label">Reuses</span><div class="chips"><span>Lead.phase</span><span>Lead.country</span></div></div>
       <div class="card-row"><span class="label">GTM</span><span class="gtm-text">Sold to expanding chains &mdash; gyms, salons &mdash; sequencing which city to prospect next.</span></div>
-    </a>
+    <div class="card-links"><a class="card-spec-link" href="/crm/rollout-planner-crm.html">Spec &rarr;</a><a class="card-live-link" href="https://rollout-planner-crm-ui.onrender.com" target="_blank" rel="noopener">Live app &#8599;</a></div></div>
 
-    <a class="card" href="/crm/marketplace-intake-crm.html">
+    <div class="card">
       <div class="card-top"><span class="card-num">22</span><h3 class="card-title">Marketplace Intake CRM</h3></div>
       <p class="card-vertical">Two-sided deals</p>
       <p class="card-pitch">ProposalOwner / ProposalSpace already model a two-sided deal &mdash; generalized past real estate to event-space or equipment rental.</p>
       <div class="card-row"><span class="label">Reuses</span><div class="chips"><span>ProposalOwner</span><span>ProposalSpace</span></div></div>
       <div class="card-row"><span class="label">GTM</span><span class="gtm-text">Same scrape-and-audit playbook, aimed at rental-marketplace operators instead of agents.</span></div>
-    </a>
+    <div class="card-links"><a class="card-spec-link" href="/crm/marketplace-intake-crm.html">Spec &rarr;</a><a class="card-live-link" href="https://marketplace-intake-crm-ui.vercel.app" target="_blank" rel="noopener">Live app &#8599;</a></div></div>
 
-    <a class="card" href="/crm/never-forget-crm.html">
+    <div class="card">
       <div class="card-top"><span class="card-num">23</span><h3 class="card-title">Never-Forget CRM</h3></div>
       <p class="card-vertical">Reminder engine</p>
       <p class="card-pitch">AgencyTask's recurring-assignment pattern generalized into one engine for birthdays, MOTs, renewals, checkups.</p>
       <div class="card-row"><span class="label">Reuses</span><div class="chips"><span>AgencyTask</span><span>WarmupPlan</span></div></div>
       <div class="card-row"><span class="label">GTM</span><span class="gtm-text">The one feature every vertical product above actually needs &mdash; ships as their shared reminder core.</span></div>
-    </a>
+    <div class="card-links"><a class="card-spec-link" href="/crm/never-forget-crm.html">Spec &rarr;</a><a class="card-live-link" href="https://never-forget-crm-ui.vercel.app" target="_blank" rel="noopener">Live app &#8599;</a></div></div>
 
-    <a class="card" href="/crm/renewal-watch-crm.html">
+    <div class="card">
       <div class="card-top"><span class="card-num">24</span><h3 class="card-title">Renewal Watch CRM</h3></div>
       <p class="card-vertical">Compliance tool</p>
       <p class="card-pitch">Regulatory and license deadline tracking for regulated SMBs, with an audit trail of what renewed on time.</p>
       <div class="card-row"><span class="label">Reuses</span><div class="chips"><span>Task</span><span>ChangeLog</span></div></div>
       <div class="card-row"><span class="label">GTM</span><span class="gtm-text">Law firms and health/vet clinics first &mdash; the two verticals where a missed renewal is expensive.</span></div>
-    </a>
+    <div class="card-links"><a class="card-spec-link" href="/crm/renewal-watch-crm.html">Spec &rarr;</a><a class="card-live-link" href="https://renewal-watch-crm-ui.vercel.app" target="_blank" rel="noopener">Live app &#8599;</a></div></div>
 
-    <a class="card" href="/crm/portal-chat.html">
+    <div class="card">
       <div class="card-top"><span class="card-num">25</span><h3 class="card-title">Portal Chat</h3></div>
       <p class="card-vertical">Embeddable widget</p>
       <p class="card-pitch">Conversation/ChatMessage, already Socket.io-backed, extracted as a client-chat widget any product above can bolt on.</p>
       <div class="card-row"><span class="label">Reuses</span><div class="chips"><span>Conversation</span><span>ChatMessage</span></div></div>
       <div class="card-row"><span class="label">GTM</span><span class="gtm-text">Not sold alone &mdash; the detail that makes any of the above feel less like a spreadsheet with a login.</span></div>
-    </a>
+    <div class="card-links"><a class="card-spec-link" href="/crm/portal-chat.html">Spec &rarr;</a><a class="card-live-link" href="https://portal-chat-ui.vercel.app" target="_blank" rel="noopener">Live app &#8599;</a></div></div>
 
   </div>
 </section>

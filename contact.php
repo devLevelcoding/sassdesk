@@ -17,10 +17,11 @@ if (file_exists($env_file)) {
     }
 }
 
-$BREVO_API_KEY = $cfg['BREVO_API_KEY']     ?? '';
-$FROM_EMAIL    = $cfg['FROM_EMAIL']         ?? 'hello@sassdesk.com';
-$FROM_NAME     = $cfg['FROM_NAME']          ?? 'SassDesk';
-$CONTACT_TO    = $cfg['CONTACT_TO']         ?? 'pirvan.marian@gmail.com';
+$BREVO_API_KEY      = $cfg['BREVO_API_KEY']      ?? '';
+$FROM_EMAIL         = $cfg['FROM_EMAIL']         ?? 'hello@sassdesk.com';
+$FROM_NAME          = $cfg['FROM_NAME']          ?? 'SassDesk';
+$CONTACT_TO         = $cfg['CONTACT_TO']         ?? 'pirvan.marian@gmail.com';
+$SLACK_WEBHOOK_URL  = $cfg['SLACK_WEBHOOK_URL']  ?? '';
 
 // ── Validate input ───────────────────────────────────────────────────────────
 $name    = trim($_POST['name']    ?? '');
@@ -76,6 +77,25 @@ $html = <<<HTML
 </body>
 </html>
 HTML;
+
+// ── Post to Slack as a standing backup — always runs, independent of whether
+// the Brevo email below succeeds, so a submission is never silently lost. ────
+if ($SLACK_WEBHOOK_URL) {
+    $slack_text = ":envelope: *New contact form submission*\n"
+        . "*From:* $name <$email>\n"
+        . "*Subject:* $subject\n"
+        . "*Message:*\n$message";
+    $slack_ch = curl_init($SLACK_WEBHOOK_URL);
+    curl_setopt_array($slack_ch, [
+        CURLOPT_POST           => true,
+        CURLOPT_POSTFIELDS     => json_encode(['text' => $slack_text]),
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_TIMEOUT        => 10,
+        CURLOPT_HTTPHEADER     => ['Content-Type: application/json'],
+    ]);
+    curl_exec($slack_ch);
+    curl_close($slack_ch);
+}
 
 // ── Send via Brevo API ───────────────────────────────────────────────────────
 $payload = json_encode([
