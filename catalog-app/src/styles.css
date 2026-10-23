@@ -188,3 +188,36 @@ section.group { margin-top: 56px; }
 .card-spec-link:hover { color: var(--blueprint); }
 .card-live-link { color: var(--accent); font-weight: 600; margin-left: auto; }
 .card-live-link:hover { text-decoration: underline; }
+
+/* AI agents: the section after the bill of materials, and the per-card agent chips */
+.chips a {
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  background: var(--chip-bg);
+  border: 1px solid var(--line);
+  padding: 2px 7px;
+  border-radius: 3px;
+  color: var(--blueprint);
+  text-decoration: none;
+}
+.chips a:hover { border-color: var(--blueprint); }
+.agent-chips a { color: var(--accent); }
+.agent-first { box-shadow: inset 3px 0 0 var(--accent); }
+.agent-badge {
+  margin-left: auto;
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  border-radius: 3px;
+  padding: 1px 6px;
+  flex: none;
+}
+html { scroll-behavior: smooth; }
+/* Phones: the section description goes under the title instead of past the screen edge */
+@media (max-width: 640px) {
+  .group-head { flex-wrap: wrap; }
+  .group-head p { flex-basis: 100%; }
+}
